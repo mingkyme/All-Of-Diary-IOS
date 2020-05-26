@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NUj-lv-PKF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--모두의 일기-->
+        <scene sceneID="2Lb-wW-Iti">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController title="모두의 일기" id="PdE-DZ-VRU" customClass="DiaryViewController" customModule="AllOfDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Hu-cs-QHp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="table" textLabel="Ir4-yq-je1" detailTextLabel="PjT-h5-Apt" style="IBUITableViewCellStyleSubtitle" id="bAq-xn-qP7">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAq-xn-qP7" id="Mdy-1y-apy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ir4-yq-je1">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PjT-h5-Apt">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PdE-DZ-VRU" id="ofK-ma-p6r"/>
+                            <outlet property="delegate" destination="PdE-DZ-VRU" id="CgO-3N-Ish"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="모두의 일기" image="book" catalog="system" id="wIs-q3-vqk"/>
+                    <connections>
+                        <outlet property="table" destination="0Hu-cs-QHp" id="laW-xO-mbi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Xl-na-Oaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="t00-CF-Fb6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NUj-lv-PKF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dLI-Rb-hZd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PdE-DZ-VRU" kind="relationship" relationship="viewControllers" id="AZq-jM-Ezf"/>
+                        <segue destination="GYw-6w-I51" kind="relationship" relationship="viewControllers" id="Cbh-ft-reS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywc-0s-rM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--일기 쓰기-->
+        <scene sceneID="8xL-aq-wIp">
+            <objects>
+                <viewController id="GYw-6w-I51" customClass="WriteViewController" customModule="AllOfDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aN-eA-FqX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="onDrag" text="일기 내용을 작성해주세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PiU-dw-zqZ">
+                                <rect key="frame" x="20" y="194" width="374" height="609"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기 작성" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unp-L1-pUD">
+                                <rect key="frame" x="20" y="54" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-Gw-9UM">
+                                <rect key="frame" x="20" y="88" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h64-Sl-xIq">
+                                <rect key="frame" x="20" y="119" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-EW-xY6">
+                                <rect key="frame" x="20" y="163" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="bottom" secondItem="PiU-dw-zqZ" secondAttribute="bottom" constant="10" id="3AH-4q-SJL"/>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="trailing" secondItem="unp-L1-pUD" secondAttribute="trailing" constant="20" id="3vh-8Y-8gX"/>
+                            <constraint firstItem="unp-L1-pUD" firstAttribute="top" secondItem="Rdg-6n-qTc" secondAttribute="top" constant="10" id="4gz-JM-kXe"/>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="trailing" secondItem="Z6p-Gw-9UM" secondAttribute="trailing" constant="20" id="NU6-ZT-12g"/>
+                            <constraint firstItem="PiU-dw-zqZ" firstAttribute="top" secondItem="Be2-EW-xY6" secondAttribute="bottom" constant="10" id="Qqi-Uk-ISA"/>
+                            <constraint firstItem="Z6p-Gw-9UM" firstAttribute="leading" secondItem="Rdg-6n-qTc" secondAttribute="leading" constant="20" id="RMX-7h-g2i"/>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="trailing" secondItem="h64-Sl-xIq" secondAttribute="trailing" constant="20" id="Rm4-Dx-E3X"/>
+                            <constraint firstItem="unp-L1-pUD" firstAttribute="leading" secondItem="Rdg-6n-qTc" secondAttribute="leading" constant="20" id="V88-f1-WNB"/>
+                            <constraint firstItem="Z6p-Gw-9UM" firstAttribute="top" secondItem="unp-L1-pUD" secondAttribute="bottom" constant="10" id="VIz-Kx-Hi3"/>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="trailing" secondItem="PiU-dw-zqZ" secondAttribute="trailing" constant="20" id="aAt-Vz-3d3"/>
+                            <constraint firstItem="Rdg-6n-qTc" firstAttribute="trailing" secondItem="Be2-EW-xY6" secondAttribute="trailing" constant="20" id="bi4-Ir-Yvb"/>
+                            <constraint firstItem="h64-Sl-xIq" firstAttribute="leading" secondItem="Rdg-6n-qTc" secondAttribute="leading" constant="20" id="k01-si-vuQ"/>
+                            <constraint firstItem="h64-Sl-xIq" firstAttribute="top" secondItem="Z6p-Gw-9UM" secondAttribute="bottom" constant="10" id="lUP-4b-cAG"/>
+                            <constraint firstItem="Be2-EW-xY6" firstAttribute="top" secondItem="h64-Sl-xIq" secondAttribute="bottom" constant="10" id="mel-uF-95L"/>
+                            <constraint firstItem="PiU-dw-zqZ" firstAttribute="leading" secondItem="Rdg-6n-qTc" secondAttribute="leading" constant="20" id="t1t-E3-Q7v"/>
+                            <constraint firstItem="Be2-EW-xY6" firstAttribute="leading" secondItem="Rdg-6n-qTc" secondAttribute="leading" constant="20" id="zmQ-8j-4hs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rdg-6n-qTc"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Y7P-L1-jpl" appends="YES" id="FGb-ee-4iN"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="일기 쓰기" image="pencil" catalog="system" id="J6Y-7L-EI0"/>
+                    <connections>
+                        <outlet property="diaryText" destination="PiU-dw-zqZ" id="fEk-C2-QcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibU-wX-EP9" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y7P-L1-jpl">
+                    <connections>
+                        <action selector="ClickEvent:" destination="GYw-6w-I51" id="rKR-Jt-4n0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="132" y="877"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

@@ -13,6 +13,9 @@
 		AAD65582247B9077004853A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD65580247B9077004853A5 /* Main.storyboard */; };
 		AAD65584247B9078004853A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD65583247B9078004853A5 /* Assets.xcassets */; };
 		AAD65587247B9078004853A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD65585247B9078004853A5 /* LaunchScreen.storyboard */; };
+		AAD6558F247B9689004853A5 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6558E247B9689004853A5 /* WriteViewController.swift */; };
+		AAD65592247BB1A7004853A5 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD65591247BB1A7004853A5 /* DiaryViewController.swift */; };
+		AAD65595247BB231004853A5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD65594247BB231004853A5 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AAD65583247B9078004853A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD65586247B9078004853A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD65588247B9078004853A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD6558E247B9689004853A5 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		AAD65591247BB1A7004853A5 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		AAD65594247BB231004853A5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD65595247BB231004853A5 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,7 @@
 			children = (
 				AAD65579247B9077004853A5 /* AllOfDiary */,
 				AAD65578247B9077004853A5 /* Products */,
+				AAD65593247BB231004853A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +71,18 @@
 				AAD65583247B9078004853A5 /* Assets.xcassets */,
 				AAD65585247B9078004853A5 /* LaunchScreen.storyboard */,
 				AAD65588247B9078004853A5 /* Info.plist */,
+				AAD6558E247B9689004853A5 /* WriteViewController.swift */,
+				AAD65591247BB1A7004853A5 /* DiaryViewController.swift */,
 			);
 			path = AllOfDiary;
+			sourceTree = "<group>";
+		};
+		AAD65593247BB231004853A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAD65594247BB231004853A5 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD6557F247B9077004853A5 /* ViewController.swift in Sources */,
+				AAD65592247BB1A7004853A5 /* DiaryViewController.swift in Sources */,
 				AAD6557B247B9077004853A5 /* AppDelegate.swift in Sources */,
+				AAD6558F247B9689004853A5 /* WriteViewController.swift in Sources */,
 				AAD6557D247B9077004853A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
