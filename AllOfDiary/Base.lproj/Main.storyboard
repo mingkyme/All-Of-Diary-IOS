@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xl-na-Oaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="139"/>
+            <point key="canvasLocation" x="570" y="877"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t00-CF-Fb6">
@@ -61,6 +61,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NUj-lv-PKF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dLI-Rb-hZd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -149,7 +150,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="132" y="877"/>
+            <point key="canvasLocation" x="-254" y="877"/>
         </scene>
     </scenes>
     <resources>
